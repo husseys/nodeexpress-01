@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Carlos Arias from Getbootstrap.com">
+    <title>Express Form Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function validation(){
+            let numberInput = document.getElementById("number");
+
+            let numberValue = numberInput.value;
+
+            if (numberValue >= 2) {
+                document.getElementById("symbol").innerHTML = "&#x2713";
+            }
+            else{
+                document.getElementById("symbol").innerHTML = "&#10060";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+
+<h1><center>Is  It  Prime  Number  Or  Not</center></h1>
+<div class="container">
+    <form action="process_get" method="GET">
+        <div class="form-group">
+            <label for="number">Please enter a number:</label>
+            <input type="number" class="form-control" id="number" name="number" min="2" oninput="validation()">
+            <span id="symbol"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+<br>
+
+<center><img src="Image/Squilliam.png" alt="Squilliam Fancy Son"></center>
+
+</body>
+</html>
